@@ -137,10 +137,15 @@ readData();
 
 // Delete Function 
 function deleteData(i) {
-    alert("deleted successfully.")
+  let con =  confirm("Are you sure you want to delete this product?")
+  if(con) {
     dataArr.splice(i,1);
     localStorage.product = JSON.stringify(dataArr);
     readData();
+  } else {
+    return false
+  }
+    
    
 }
 
