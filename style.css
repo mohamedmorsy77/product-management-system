@@ -5,19 +5,20 @@
 }
 
 body {
-  background-color: #3e205c;
+  background-color: #161a30;
   color: #fff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .cruds {
-  width: 80%;
+  width: 90%;
   margin: 30px auto;
 }
 .head {
   text-align: center;
   line-height: 1.5;
+  color: #f0ece5;
 }
 .head h1 {
   font-size: 3rem;
@@ -28,8 +29,11 @@ body {
   font-size: 1.5rem;
 }
 input {
-  background-color: #222;
+  background-color: #31304d;
   width: 100%;
+}
+input::placeholder {
+  color: #f0ece5;
 }
 .btnSearch {
   display: flex;
@@ -39,20 +43,33 @@ input {
   display: flex;
   gap: 5px;
 }
+.priceProduct input {
+  width: 20%;
+}
+.priceProduct small {
+  width: 20%;
+  width: fit-content;
+}
 button {
-  background-color: #8b38de;
+  background-color: #b6bbc4;
   cursor: pointer;
   width: 100%;
-  color: white !important;
+  color: #161a30 !important;
   font-weight: bold;
+  font-size: 1rem;
 }
 button:hover {
-  background-color: black;
+  background-color: #161a30;
+  border: 1px solid #b6bbc4 !important;
+  outline: 1px solid #b6bbc4 !important;
+  color: #b6bbc4 !important;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
 }
-.table {
-  /* background-color: #2e2e2e; */
- 
-}
+
 input,
 button {
   outline: 0;
@@ -68,14 +85,14 @@ button {
   color: #aba5a5;
 }
 input:focus {
-  background-color: #111;
+  background-color: #161a30;
   transform: scale(1.01);
   -webkit-transform: scale(1.01);
   -moz-transform: scale(1.01);
   -ms-transform: scale(1.01);
   -o-transform: scale(1.01);
-  border: 1px solid #683898;
-  outline: 1px solid #683898;
+  border: 1px solid #b6bbc4;
+  outline: 1px solid #b6bbc4;
 }
 small {
   padding: 15px;
@@ -86,10 +103,6 @@ table {
   width: 100%;
   margin-top: 20px;
 }
-
-
-
-
 
 .total {
   position: relative;
@@ -113,7 +126,6 @@ table {
 
 table {
   border-collapse: collapse;
-  
 }
 tbody {
   text-align: center;
@@ -121,34 +133,55 @@ tbody {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #222;
+  background-color: #161a30;
 }
 tbody tr:nth-child(even) {
-  background-color: #434141;
+  background-color: #31304d;
 }
 table th {
-    text-transform: uppercase;
-    padding: 5px;
-    background: #8b38de;
+  text-transform: uppercase;
+  padding: 5px;
+  background: #b6bbc4;
+  color: #161a30;
 }
 table td {
-    padding: 5px;
+  padding: 5px;
 }
 .update {
-  background-color: #378d37;
+  background-color: #b6bbc4;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
 }
 .update:hover {
-  background-color: green;
+  background-color: #504e7e;
+  color: #f0ece5 !important;
+  outline: none !important;
+  border: none !important;
 }
-tbody .update, tbody .delete{
-    padding: 7px;
-    font-weight: 600;
+tbody .update,
+tbody .delete {
+  padding: 7px;
+  font-weight: 600;
 }
 tbody .delete {
-    background-color: rgb(196, 13, 13);
+  background-color: #504e7e;
+  color: #f0ece5 !important;
+  outline: none !important;
+  border: none !important;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
 }
-
-@media screen and (max-width : 768px) {
+tbody .delete:hover {
+  background-color: #b6bbc4;
+  color: #161a30 !important;
+}
+@media screen and (max-width: 768px) {
   .table {
     overflow-x: auto;
   }
