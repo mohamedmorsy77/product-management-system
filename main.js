@@ -137,6 +137,7 @@ readData();
 
 // Delete Function 
 function deleteData(i) {
+    alert("deleted successfully.")
     dataArr.splice(i,1);
     localStorage.product = JSON.stringify(dataArr);
     readData();
@@ -146,9 +147,15 @@ function deleteData(i) {
 
 // DeleteAll Data
 function deleteAllData() {
-    localStorage.clear();
-    dataArr.splice(0);
-    readData();
+    let con = confirm("Are you sure you want to delete all data?") ;
+    if(con === true) {
+        localStorage.clear();
+        dataArr.splice(0);
+        readData();
+    } else {
+        return false;
+    }
+  
 
 }
 deleteAll.addEventListener("click", deleteAllData);
@@ -161,7 +168,7 @@ function updateData(i) {
     taxes.value = dataArr[i].taxes;
     ads.value = dataArr[i].ads;
     discount.value = dataArr[i].discount;
-    category.value = dataArr[i].title;
+    category.value = dataArr[i].category;
     count.style.display = "none";
     create.innerHTML = "Update";
     totalPrice()
@@ -239,3 +246,7 @@ function search(value) {
 }
     document.querySelector(".tbody").innerHTML = table;
 }
+
+
+
+
